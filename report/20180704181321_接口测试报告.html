@@ -7097,68 +7097,71 @@ body.skin-3 {
 <script src="https://cdn.bootcss.com/chosen/1.8.2/chosen.jquery.js"></script>
 <script type="text/javascript">
     var resultData = {
+    "testFail": 1,
+    "testAll": 4,
+    "testSkip": 0,
     "testError": 0,
     "totalTime": "1s",
-    "testPass": 4,
-    "testName": "20180704163646_接口测试报告.html",
+    "testName": "20180704181321_接口测试报告.html",
+    "testPass": 3,
+    "beginTime": "2018-07-04 18:13:21",
     "testResult": [
         {
             "methodName": "test_request_00001",
+            "spendTime": "0.116 s",
             "status": "成功",
-            "log": [
-                "http://118.24.3.40/api/user/login",
-                "post",
-                "{'username': 'niuhanyang', 'passwd': 'aA123456'}",
-                ""
-            ],
             "className": "Login",
-            "spendTime": "0.132 s",
-            "description": "正常登录"
+            "description": "正常登录",
+            "log": [
+                "http://10.32.231.205:8080/api/v1/pms/login",
+                "post",
+                "{'password': 123456, 'username': 18221293942}",
+                ""
+            ]
         },
         {
             "methodName": "test_request_00002",
+            "spendTime": "0.118 s",
             "status": "成功",
-            "log": [
-                "http://118.24.3.40/api/user/login",
-                "post",
-                "{'username': 'niuhanyang', 'passwd': 'aA12345678'}",
-                ""
-            ],
             "className": "Login",
-            "spendTime": "0.139 s",
-            "description": "密码错误"
+            "description": "密码错误",
+            "log": [
+                "http://10.32.231.205:8080/api/v1/pms/login",
+                "post",
+                "{'password': 12345678, 'username': 18221293942}",
+                ""
+            ]
         },
         {
             "methodName": "test_request_00003",
+            "spendTime": "0.0932 s",
             "status": "成功",
-            "log": [
-                "http://118.24.3.40/api/user/login",
-                "post",
-                "{'username': 'niuhanyang'}",
-                ""
-            ],
             "className": "Login",
-            "spendTime": "0.122 s",
-            "description": "密码不传"
+            "description": "账号错误",
+            "log": [
+                "http://10.32.231.205:8080/api/v1/pms/login",
+                "post",
+                "{'password': 123456, 'username': 1822129394}",
+                ""
+            ]
         },
         {
-            "methodName": "test_request_00001",
-            "status": "成功",
-            "log": [
-                "http://118.24.3.40/api/user/user_reg",
-                "post",
-                "{'username': 'niuhanyang', 'pwd': 'aA123456', 'cpwd': 'aA123465'}",
-                ""
-            ],
+            "methodName": "test_request_00001_error",
+            "spendTime": "0.002 s",
+            "status": "失败",
             "className": "Reg",
-            "spendTime": "0.122 s",
-            "description": "用户名字已经被注册的"
+            "description": null,
+            "log": [
+                "",
+                "Traceback (most recent call last):\n",
+                "  File \"D:\\Python 3.5\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"D:\\Python 3.5\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
+                "  File \"E:\\shenyong\\venv1\\lib\\site-packages\\ddt.py\", line 144, in wrapper\n    return func(self, *args, **kwargs)\n",
+                "  File \"E:\\shenyong\\venv1\\lib\\site-packages\\ddt.py\", line 180, in func\n    raise ValueError(message % file_attr)\n",
+                "ValueError: E:\\Test_framework\\case_data\\reg.yml does not exist\n"
+            ]
         }
-    ],
-    "beginTime": "2018-07-04 16:36:46",
-    "testFail": 0,
-    "testAll": 4,
-    "testSkip": 0
+    ]
 };
     function details(obj) {
         if ($(obj).text() == '展开') {

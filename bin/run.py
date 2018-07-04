@@ -6,8 +6,8 @@ sys.path.append(BASE_PATH)
 from lib import tools
 import datetime
 
-def main():
-    # tools.makeCase()#自动生成py文件
+def Main():
+    tools.makeCase()#自动生成py文件
     pass_count,fail_count,abs_path = tools.run_all_case()
 
     msg = '''
@@ -22,4 +22,5 @@ def main():
 
     # tools.sendmail(title,msg,abs_path)
 
-main()
+if __name__ == '__main__':
+    Main()

@@ -1,29 +1,39 @@
 -
-  url : /api/user/login
-  method : post
-  detail : 正常登录
-  data :
-    username : niuhanyang
-    passwd : aA123456
-  check :
-    - userId
-    - sign
+  url: api/v1/pms/login
+  detail: 正常登录
+  method: post
+  header:
+    Content-Type: application/json
+  data:
+    username: 18221293942
+    password: 123456
+  check:
+    - bid
+    - innCount
+    - roleId
 
 -
-  url: /api/user/login
-  method: post
+  url: api/v1/pms/login
   detail: 密码错误
+  method: post
+  header:
+    Content-Type: application/json
   data:
-    username: niuhanyang
-    passwd: aA12345678
+    username: 18221293942
+    password: 12345678
   check:
-    - 用户名/密码错误！
+    - '10100'
+    - 账号/手机号有误，请检查后重新输入
 
 -
-  url: /api/user/login
+  url: api/v1/pms/login
+  detail: 账号错误
   method: post
-  detail: 密码不传
+  header:
+    Content-Type: application/json
   data:
-    username: niuhanyang
+    username: 1822129394
+    password: 123456
   check:
-    - 必填参数未填
+    - '10100'
+    - 手机号有误
