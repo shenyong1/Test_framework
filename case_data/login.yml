@@ -1,0 +1,29 @@
+-
+  url : /api/user/login
+  method : post
+  detail : 正常登录
+  data :
+    username : niuhanyang
+    passwd : aA123456
+  check :
+    - userId
+    - sign
+
+-
+  url: /api/user/login
+  method: post
+  detail: 密码错误
+  data:
+    username: niuhanyang
+    passwd: aA12345678
+  check:
+    - 用户名/密码错误！
+
+-
+  url: /api/user/login
+  method: post
+  detail: 密码不传
+  data:
+    username: niuhanyang
+  check:
+    - 必填参数未填

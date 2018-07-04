@@ -1,0 +1,8 @@
+[2018-06-03 15:21:11,141] [INFO] [Login.py:test_request:46] userId
+[2018-06-03 15:21:11,141] [INFO] [Login.py:test_request:46] sign
+[2018-06-03 15:21:11,253] [INFO] [Login.py:test_request:46] 密码错误
+[2018-06-03 15:21:11,350] [INFO] [Login.py:test_request:46] 必填参数未填
+[2018-06-03 15:34:14,141] [INFO] [Login.py:test_request:46] userId
+[2018-06-03 15:34:14,142] [INFO] [Login.py:test_request:46] sign
+[2018-06-03 15:34:14,232] [INFO] [Login.py:test_request:46] 用户名/密码错误！
+[2018-06-03 15:34:14,327] [INFO] [Login.py:test_request:46] 必填参数未填
