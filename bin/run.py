@@ -7,7 +7,7 @@ from lib import tools
 import datetime
 
 def main():
-    tools.makeCase()#自动生成py文件
+    # tools.makeCase()#自动生成py文件
     pass_count,fail_count,abs_path = tools.run_all_case()
 
     msg = '''
