@@ -7,7 +7,8 @@ def GetTime(day=0):
     today = time.gmtime()
     year = str(today.tm_year)
     mon = str(today.tm_mon if today.tm_mon>10 else '0'+str(today.tm_mon))
-    real_day = str(today.tm_mday + day)
+    to_day = today.tm_mday + day
+    real_day = str(to_day if to_day>10 else '0'+str(to_day))
 
     return year+mon+real_day
 

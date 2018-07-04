@@ -7,7 +7,7 @@
     pip install request
 
 文件夹简介：
-1、bin—>run.py：主函数 包含多线程运行case 多线程生成报告
+1、bin—>run.py：主函数 运行case 生成报告
 2、appcase—>dingdang_test.py：测试的case，把需要测试的case添加到这里
 3、lib—>page—>app—>dingdang_case.py：各个case的具体实现
 4、lib—>core：框架的基本工具
@@ -18,22 +18,6 @@
 9、log—>android Emulator.log：输出的日志
 10、report—>app—>android Emulator.html：生成的测试报告，可在浏览器中查看（右击android Emulator.html—>Copy Path—>黏贴到浏览器中打开）
 
-
-需要下载的东西：
-3、appium
-2、nodejs
-1、android sdk
-4、python
-5、python运行环境，如pyCharm
-
-
-获取手机信息：
-platformName: Android
-platformVersion: 手机的版本号
-ip: 127.0.0.1
-port: 开启appium时会显示
-udid: 命令行adb devices（前提：安装了adb）
-deviceName: 随便取
 
 
 写 case 时，根据自己的需求补充对应的文件：

@@ -7097,19 +7097,16 @@ body.skin-3 {
 <script src="https://cdn.bootcss.com/chosen/1.8.2/chosen.jquery.js"></script>
 <script type="text/javascript">
     var resultData = {
-    "testFail": 1,
     "testAll": 4,
+    "totalTime": "0s",
+    "beginTime": "2018-07-04 19:47:29",
+    "testPass": 4,
+    "testName": "20180704194729_接口测试报告.html",
     "testSkip": 0,
-    "testError": 0,
-    "totalTime": "1s",
-    "testName": "20180704181321_接口测试报告.html",
-    "testPass": 3,
-    "beginTime": "2018-07-04 18:13:21",
     "testResult": [
         {
-            "methodName": "test_request_00001",
-            "spendTime": "0.116 s",
             "status": "成功",
+            "spendTime": "0.127 s",
             "className": "Login",
             "description": "正常登录",
             "log": [
@@ -7117,12 +7114,12 @@ body.skin-3 {
                 "post",
                 "{'password': 123456, 'username': 18221293942}",
                 ""
-            ]
+            ],
+            "methodName": "test_request_00001"
         },
         {
-            "methodName": "test_request_00002",
-            "spendTime": "0.118 s",
             "status": "成功",
+            "spendTime": "0.0983 s",
             "className": "Login",
             "description": "密码错误",
             "log": [
@@ -7130,12 +7127,12 @@ body.skin-3 {
                 "post",
                 "{'password': 12345678, 'username': 18221293942}",
                 ""
-            ]
+            ],
+            "methodName": "test_request_00002"
         },
         {
-            "methodName": "test_request_00003",
-            "spendTime": "0.0932 s",
             "status": "成功",
+            "spendTime": "0.0732 s",
             "className": "Login",
             "description": "账号错误",
             "log": [
@@ -7143,25 +7140,25 @@ body.skin-3 {
                 "post",
                 "{'password': 123456, 'username': 1822129394}",
                 ""
-            ]
+            ],
+            "methodName": "test_request_00003"
         },
         {
-            "methodName": "test_request_00001_error",
-            "spendTime": "0.002 s",
-            "status": "失败",
-            "className": "Reg",
-            "description": null,
+            "status": "成功",
+            "spendTime": "0.273 s",
+            "className": "UsableRoom",
+            "description": "正常获取可用房间",
             "log": [
-                "",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\Python 3.5\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
-                "  File \"D:\\Python 3.5\\lib\\unittest\\case.py\", line 605, in run\n    testMethod()\n",
-                "  File \"E:\\shenyong\\venv1\\lib\\site-packages\\ddt.py\", line 144, in wrapper\n    return func(self, *args, **kwargs)\n",
-                "  File \"E:\\shenyong\\venv1\\lib\\site-packages\\ddt.py\", line 180, in func\n    raise ValueError(message % file_attr)\n",
-                "ValueError: E:\\Test_framework\\case_data\\reg.yml does not exist\n"
-            ]
+                "http://10.32.231.205:8080/api/v1/pms/api/room/getUsableForOverNight?bid=c8ed74590858c5da38d619e20cfa41f3",
+                "post",
+                "{'innId': '2480', 'checkoutDate': '20180705', 'checkinDate': '20180704'}",
+                ""
+            ],
+            "methodName": "test_getroom"
         }
-    ]
+    ],
+    "testError": 0,
+    "testFail": 0
 };
     function details(obj) {
         if ($(obj).text() == '展开') {

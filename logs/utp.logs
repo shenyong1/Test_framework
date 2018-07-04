@@ -1,3 +1,6 @@
 [2018-07-04 18:13:21,913] [INFO] [Login.py:test_request:34] post_res:{"status":0,"message":"成功","data":{"mobile":"18221293942","bid":"bde3234096301aac9af04a9af0c8543e","innCount":12,"uniqueStr":"453","roleId":2}}
 [2018-07-04 18:13:22,029] [INFO] [Login.py:test_request:34] post_res:{"status":10100,"message":"账号/手机号有误，请检查后重新输入 ！","data":null}
 [2018-07-04 18:13:22,123] [INFO] [Login.py:test_request:34] post_res:{"status":10100,"message":"账号/手机号有误，请检查后重新输入","data":null}
+[2018-07-04 19:39:30,206] [INFO] [UsableRoom.py:test_getroom:34] data：{'checkoutDate': '2018075', 'checkinDate': '2018074', 'innId': '2480'}
+[2018-07-04 19:43:10,979] [INFO] [UsableRoom.py:test_getroom:34] data：{'innId': '2480', 'checkoutDate': '20180705', 'checkinDate': '20180704'}
+[2018-07-04 19:44:21,728] [INFO] [UsableRoom.py:test_getroom:34] data：{'innId': '2480', 'checkinDate': '20180704', 'checkoutDate': '20180705'}
