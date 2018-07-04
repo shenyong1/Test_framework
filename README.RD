@@ -45,11 +45,3 @@ deviceName: 随便取
 
 
 测试步骤：
-1、开启appium服务，在命令行输入：
-            Windows ：C:/Program Files/Appium/node.exe（具体根据自己电脑上appium所在文件夹）
-                                C:/Program Files/Appium/node_modules/appium/bin/appium.js
-            Mac电脑：appium
-2、运行：bin—>dingdang_run.py
-3、测试完毕关闭服务，在命令行输入：
-            Windows：taskkill /F /im node.exe
-            Mac电脑：pkill -9 node /t
