@@ -2,13 +2,12 @@
     python 3
     pip install ddt
     pip install pyyaml
-    pip install nnlog
     pip install BeautifulReport
     pip install yagmail
     pip install request
 
 文件夹简介：
-1、bin—>dingdang_run.py：主函数 包含多线程运行case 多线程生成报告
+1、bin—>run.py：主函数 包含多线程运行case 多线程生成报告
 2、appcase—>dingdang_test.py：测试的case，把需要测试的case添加到这里
 3、lib—>page—>app—>dingdang_case.py：各个case的具体实现
 4、lib—>core：框架的基本工具

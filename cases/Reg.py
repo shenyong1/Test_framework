@@ -11,7 +11,7 @@ class Reg(unittest.TestCase):
 
     # base_url = 'http://118.24.3.40/'
 
-    @ddt.file_data(r'E:\shenyong\作业练习\day14-测试框架\day14-1\UTP\case_data\reg.yml') #读文件，获取数据
+    @ddt.file_data(r'E:\Test_framework\case_data\reg.yml') #读文件，获取数据
     def test_request(self,**kwargs):
         detail = kwargs.get('detail','没有用例描述')
         self._testMethodDoc = detail #动态设置用例描述
