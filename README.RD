@@ -1,4 +1,4 @@
-#安装依赖
+安装依赖
     python 3
     pip install ddt
     pip install pyyaml
@@ -7,24 +7,22 @@
     pip install request
 
 文件夹简介：
-1、bin—>run.py：主函数 运行case 生成报告
-2、appcase—>dingdang_test.py：测试的case，把需要测试的case添加到这里
-3、lib—>page—>app—>dingdang_case.py：各个case的具体实现
-4、lib—>core：框架的基本工具
-5、lib—>core—>appController.py：开启server、启动app driver（server、driver的一些管理操作）
-6、lib—>core—>commonTools.py：写case时用到的基本工具，如点击
-7、conf—>appCcontroller.yml：相关配置，如手机操作系统、测试的app的appPcackage/appActivity
-8、conf—>element_dingdang_login.yml：需要操作的页面元素
-9、log—>android Emulator.log：输出的日志
-10、report—>app—>android Emulator.html：生成的测试报告，可在浏览器中查看（右击android Emulator.html—>Copy Path—>黏贴到浏览器中打开）
+1、bin—>run.py：主函数 运行case 生成报告 发送邮件
+2、case_data—>login.yml：数据驱动的数据源，用于生成测试用及校验测试结果
+3、cases:存放测试用例
+4、conf—>base.txt：测试用例模版，用于生成测试用例
+5、conf—>setting.py：测试环境配置
+6、lib:框架的基工具
+   lib—>commonTools.py：通用方法，如：获取时间、生成随机数等
+   lib—>log.py：管理生成日志
+   lib—>my_redis.py：对于redis操作的二次封装
+   lib—>my_request.py：对于request请求的二次封装，如新加异常处理，日志记录
+   lib—>my_sql.py：数据操作方法
+   lib—>send_mail.py：发送测试报告邮件
+   lib—>tool.py：生成测试用例，运行测试用例等
+7、log:存放输出的日志
+8、report:存放生成的测试报告
 
 
 
-写 case 时，根据自己的需求补充对应的文件：
-1、conf—>appCcontroller.yml：根据自己的测试手机和测试app修改相关配置
-2、conf—>element_dingdang_login.yml：添加页面中需要操作的元素
-3、ib—>page—>app—>dingdang_case.py：各个case的具体实现
-4、appcase—>dingdang_test.py：从步骤3中调用需测试的case
 
-
-测试步骤：

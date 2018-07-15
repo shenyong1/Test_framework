@@ -5,7 +5,7 @@ BASE_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_PATH)
 import yagmail
 from conf.setting import *
-from lib.log import apt_log
+from lib.log import logger
 def sendmail(title,content,attrs=None):
     m = yagmail.SMTP(host=MAIL_HOST,user=USER,password=PASSWORD,smtp_ssl=True)
     try:
@@ -14,7 +14,7 @@ def sendmail(title,content,attrs=None):
                contents=content,
                attachments=attrs
                )
-        apt_log.info("邮件发送成功！")
+        logger.info("邮件发送成功！")
 
     except Exception as e:
         print('error')
